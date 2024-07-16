@@ -1,0 +1,120 @@
+input[type=text], select, input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.lds_form__cont {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.lds_calc__form input[type=submit] {
+    width: 10%;
+    background-color: #14c5fd;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    display: block;
+    width: 100%;
+}
+
+p.submit {
+    width: max-content;
+    margin: auto;
+}
+
+.lds_calc__form input[type=submit]:hover {
+    background-color: #007ba0;
+}
+
+/* CBOX */
+.checkbox.style-f {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: calc(100% - 30px);
+}
+.checkbox.style-f #lds_cbox__adm_tel, .checkbox.style-f #lds_cbox__adm_mail {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkbox.style-f #lds_cbox__adm_tel:checked ~ .checkbox__checkmark, .checkbox.style-f #lds_cbox__adm_mail:checked ~ .checkbox__checkmark {
+    background-color: black;
+}
+.checkbox.style-f #lds_cbox__adm_tel:checked ~ .checkbox__checkmark:after, .checkbox.style-f #lds_cbox__adm_mail:checked ~ .checkbox__checkmark:after {
+transform: scale(1);
+}
+.checkbox.style-f:hover #lds_cbox__adm_tel ~ .checkbox__checkmark, .checkbox.style-f:hover #lds_cbox__adm_mail ~ .checkbox__checkmark {
+    background-color: black;
+}
+.checkbox.style-f:hover #lds_cbox__adm_tel:checked ~ .checkbox__checkmark, .checkbox.style-f:hover #lds_cbox__adm_mail:checked ~ .checkbox__checkmark {
+    background-color: black;
+}
+.checkbox.style-f .checkbox__checkmark {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: black;
+    transition: background-color 0.25s ease;
+    border-radius: 11px;
+}
+.checkbox.style-f .checkbox__checkmark:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 22px;
+    height: 22px;
+    display: block;
+    background-color: #14c5fd;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+.checkbox.style-f .checkbox__body {
+    color: #333;
+    line-height: 1.4;
+    font-size: 16px;
+    transition: font-weight 0.3s ease;
+}
+  
+/* END CBOX */
+#lds_calc__tel, #lds_calc__tel_user, #lds_calc__tel_api, #lds_calc__tel_sender, #lds_calc__mail {
+    display: none;
+}
+.checkbox.style-f #lds_cbox__adm_tel:checked ~ #lds_calc__tel, .checkbox.style-f #lds_cbox__adm_tel:checked ~ #lds_calc__tel_user, .checkbox.style-f #lds_cbox__adm_tel:checked ~ #lds_calc__tel_api, .checkbox.style-f #lds_cbox__adm_tel:checked ~ #lds_calc__tel_sender, .checkbox.style-f #lds_cbox__adm_mail:checked ~ #lds_calc__mail {
+    display: block;
+}
+
+.lds_mainlink {
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #14c5fd;
+    text-decoration: unset;
+    transition: .3s;
+}
+.lds_mainlink:hover {
+    color: #007ba0;
+}
